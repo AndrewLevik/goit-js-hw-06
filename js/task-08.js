@@ -6,7 +6,7 @@ function handleSubmit(event) {
     event.preventDefault()
     const {
         elements: { email, password },
-    } = event.currentTarget
+    } = event.target
 
     if (email.value === '' || password.value === '') {
         return alert('Please enter the data in all fields')
@@ -14,5 +14,5 @@ function handleSubmit(event) {
     const userDetails = { email: email.value, Password: password.value }
     
     console.log(userDetails);
-    event.currentTarget.reset()
+    event.target.reset()
 };
